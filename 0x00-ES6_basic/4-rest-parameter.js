@@ -1,5 +1,3 @@
-export default function returnHowManyArguments(...args){
-	return args.length;
+export default function returnHowManyArguments(...rest) {
+  return rest.length;
 }
-
-console.log(returnHowManyArguments(1, 'two', true));
