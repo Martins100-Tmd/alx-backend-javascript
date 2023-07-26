@@ -1,15 +1,13 @@
-import signUpUser from './4-user-promise';
-import uploadPhoto from './5-photo-reject';
+import handleProfileSignup from './6-final-user';
 
-export default async function handleProfileSignup(firstName, lastName, fileName) {
-  const promise1 = signUpUser(firstName, lastName);
-  const promise2 = uploadPhoto(fileName);
+test("handleProfileSignup returns the right array", async () => {
+    const queue = await handleProfileSignup('John', 'Doe', 'Gerald.jpg');
+    expect(queue).toEqual([
+      {
+        status: 'fulfilled',
+        value: { firstName: 'John', lastName: 'Doe' }
+      },
+      { status: 'rejected', value: 'Error: Gerald.jpg cannot be processed' }
+    ]);
+});
 
-  const promise3 = Promise.allSettled([promise1, promise2]);
-  const test = await promise3.then((results) => results);
-
-  const message = test[1].reason;
-  delete (test[1].reason);
-  test[1].value = message.toString();
-  return test;
-}

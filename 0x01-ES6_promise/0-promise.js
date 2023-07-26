@@ -1,7 +1,8 @@
-function getResponseFromAPI() {
-	return new Promise((res,rej)=>{
-		res(1);
-	});
+export default function getResponseFromAPI() {
+  return new Promise((resolve) => {
+    const b = 12;
+    if (b === 12) {
+      resolve('correct');
+    }
+  });
 }
-let res = getResponseFromAPI();
-console.log(res instanceof Promise);

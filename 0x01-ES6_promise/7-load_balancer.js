@@ -1,5 +1,5 @@
-export default function loadBalancer(chinaDownload, USDownload) {
-	const firstPromise = Promise.race([chinaDownload, USDownload]);
+export default async function loadBalancer(chinaDownload, USDownload) {
+  const promise1 = Promise.race([chinaDownload, USDownload]);
 
-	return firstPromise;
+  return promise1;
 }
