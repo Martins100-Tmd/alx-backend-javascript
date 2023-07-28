@@ -32,17 +32,5 @@ export default class HolbertonCourse {
   get length() {
     return this._length;
   }
-
-  set students(arr) {
-    if (typeof arr === 'object') {
-      this._students = arr;
-    } else {
-      throw new TypeError('Students must be an array');
-    }
-  }
-
-  get students() {
-    return this._name;
-  }
 }
 
