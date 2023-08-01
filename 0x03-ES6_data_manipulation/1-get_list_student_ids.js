@@ -4,4 +4,3 @@ export default function getListStudentIds(arrOfObject) {
   }
   return arrOfObject.map((item) => item.id);
 }
-
