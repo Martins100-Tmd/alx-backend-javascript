@@ -1,4 +1,4 @@
-export default function getStudentsByLocation(student = [], location = '') {
+export default function getStudentsByLocation(student, location) {
   if (typeof student !== 'object') {
     return [];
   }
