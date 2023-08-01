@@ -10,4 +10,3 @@ export default function groceriesList() {
   arr.forEach((item) => map.set(...item));
   return map;
 }
-

@@ -7,4 +7,3 @@ export default function createInt8TypedArray(length, pos, val) {
   data.setInt8(pos, val);
   return data;
 }
-

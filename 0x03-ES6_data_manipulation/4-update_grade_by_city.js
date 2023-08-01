@@ -15,4 +15,3 @@ export default function updateStudentGradeByCity(student = [], city, grade = [])
     .filter((item) => item.location === city);
   return mapped;
 }
-

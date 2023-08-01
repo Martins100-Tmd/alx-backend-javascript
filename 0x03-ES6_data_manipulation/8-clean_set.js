@@ -11,4 +11,3 @@ export default function cleanSet(set, str) {
   });
   return mapped.join('');
 }
-
