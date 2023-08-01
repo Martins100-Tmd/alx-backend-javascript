@@ -4,4 +4,3 @@ export default function getStudentsByLocation(student, location) {
   }
   return student.filter((item) => item.location === location);
 }
-
